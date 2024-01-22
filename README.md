@@ -1,2 +1,2 @@
 # Encryption_Exercise
-for FOSS @ SIT
+for FOSS Club SIT
