@@ -4,15 +4,6 @@ import subprocess
 import sys
 import time
 
-if sys.version >= '3.9':
-    print('Your Python version is above 3.9')
-    print('Checking Packages')
-    time.sleep(2)
-else:
-    print('Your Python version is not above 3.9')
-    print('Please update your Python version')
-    time.sleep(2)
-    exit()
 
 def __init():
 
