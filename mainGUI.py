@@ -1,9 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import hashlib
-#import main_init
-
-#main_init.__init()
+import main_init
+main_init.__init()
 
 
 
