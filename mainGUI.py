@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 import hashlib
-import main_init
-main_init.__init()
+#import main_init
 
+#main_init.__init()
 
 
 def hash_text(text):
@@ -25,12 +25,13 @@ def check_hash():
     else:
         result_label.config(text="No matching hash found.")
 
-def display_tool_info(tool):
-    tool_info = get_tool_info(tool)
-
-    result_label.config(text=f"1. What is this tool?\n\n"
-                             f"2. Proprietary alternatives of this tool?\n\n"
-                             f"3. What languages is this tool written in?")
+def display_tool_info():
+    entry_label = tk.Label(window, text="1. What is this tool?", font=questions)
+    entry_label.pack(pady=5)
+    entry_label = tk.Label(window, text="2. Proprietary alternatives of this tool?", font=questions)
+    entry_label.pack(pady=5)
+    entry_label = tk.Label(window, text="3. What languages is this tool written in?", font=questions)
+    entry_label.pack(pady=5)
     
 cipher_dictionary = {
     "Linux": hash_text("Linux"),  # [FOSS Open Source]
@@ -87,8 +88,9 @@ cipher_dictionary = {
 
 window = tk.Tk()
 window.title("Hash Finder")
-window.geometry("500x300")
+window.geometry("600x500")
 font=("Times New Roman", 17)
+questions=("Arial",14)
 
 entry_label = tk.Label(window, text="Enter a SHA-256 hash:", font=font)
 entry_label.pack(pady=20)
@@ -102,4 +104,7 @@ search_button.pack(pady=10)
 result_label = tk.Label(window, text="")
 result_label.pack(pady=10)
 
+display_tool_info()
+
 window.mainloop()
+
