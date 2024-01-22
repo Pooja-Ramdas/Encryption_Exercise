@@ -1,6 +1,11 @@
 import tkinter as tk
 from tkinter import messagebox
 import hashlib
+import main_init
+
+main_init.__init()
+
+
 
 def hash_text(text):
     sha256_hash = hashlib.sha256(text.encode()).hexdigest()
