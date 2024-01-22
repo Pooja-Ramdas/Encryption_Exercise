@@ -26,6 +26,14 @@ def check_hash():
     else:
         result_label.config(text="No matching hash found.")
 
+def display_tool_info(tool):
+    tool_info = get_tool_info(tool)
+
+    # Display additional questions
+    result_label.config(text=f"1. What is this tool?\n   {tool_info.get('name', 'Unknown')}\n\n"
+                             f"2. Proprietary alternatives of this tool?\n   {', '.join(tool_info.get('alternatives', []))}\n\n"
+                             f"3. What languages is this tool written in?\n   {', '.join(tool_info.get('languages', []))}")
+    
 #Replace dictionary later
 cipher_dictionary = {
     "apache": hash_text("apache"),
