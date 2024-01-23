@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import hashlib
+pip install pyinstaller
+
 #import main_init
 
 #main_init.__init()
